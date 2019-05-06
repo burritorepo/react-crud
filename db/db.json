@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "name": "Katya",
+      "lastname": "Rueda",
+      "git": "katyarueda",
+      "email": "katyarueda@gmail.com",
+      "phone": "923708059",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSce-Wk05r6DVln153xdhBzU7Vqwmj9JtQ8ysawwCUnjy40GY03sA",
+      "about": "hola me llamo katya rueda santillan, tengo 31 años y soy administradora. Tengo una hija que se llama Yamila.",
+      "id": 1
+    },
+    {
+      "name": "Sebastian",
+      "lastname": "Yabiku",
+      "git": "katyarueda",
+      "email": "katyarueda@gmail.com",
+      "phone": "923708059",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSce-Wk05r6DVln153xdhBzU7Vqwmj9JtQ8ysawwCUnjy40GY03sA",
+      "about": "hola me llamo katya rueda santillan, tengo 31 años y soy administradora. Tengo una hija que se llama Yamila.",
+      "id": 2
+    },
+    {
+      "name": "Luis",
+      "lastname": "Eduardo",
+      "git": "katyarueda",
+      "email": "katyarueda@gmail.com",
+      "phone": "923708059",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSce-Wk05r6DVln153xdhBzU7Vqwmj9JtQ8ysawwCUnjy40GY03sA",
+      "about": "hola me llamo katya rueda santillan, tengo 31 años y soy administradora. Tengo una hija que se llama Yamila.",
+      "id": 3
+    },
+    {
+      "name": "Victor",
+      "lastname": "Cachimbo",
+      "git": "katyarueda",
+      "email": "katyarueda@gmail.com",
+      "phone": "923708059",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSce-Wk05r6DVln153xdhBzU7Vqwmj9JtQ8ysawwCUnjy40GY03sA",
+      "about": "hola me llamo katya rueda santillan, tengo 31 años y soy administradora. Tengo una hija que se llama Yamila.",
+      "id": 4
+    }
+  ]
+}
