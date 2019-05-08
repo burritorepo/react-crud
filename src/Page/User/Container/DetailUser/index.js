@@ -45,6 +45,6 @@ class DetailUser extends Component {
 }
 
 export {
-  DetailUser
+  DetailUser as PageDetailUser
 }
 

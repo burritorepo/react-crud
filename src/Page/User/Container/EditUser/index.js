@@ -84,5 +84,5 @@ class EditUser extends Component {
 }
 
 export {
-  EditUser
+  EditUser as PageEditUser
 }

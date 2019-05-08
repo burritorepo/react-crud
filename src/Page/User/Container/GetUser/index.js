@@ -42,5 +42,5 @@ class GetUser extends Component {
 }
 
 export {
-  GetUser
+  GetUser as PageGetUser
 }

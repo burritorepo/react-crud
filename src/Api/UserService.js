@@ -1,6 +1,17 @@
 import { Service } from './Service';
 
 class UserService extends Service {
+  createUser(body) {
+    return this.request({
+      url: `users`,
+      method: 'POST',
+      body,
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+  }
+
   deleteUser(id) {
     return this.request({
       url: `users/${id}`,

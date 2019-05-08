@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { FormUser } from '../../../../Component/FormUser'
-
+import { connect } from 'react-redux';
+import { FormUser } from '../../../../Component/FormUser';
+import { requestCreateUser } from '../../Store/Action'
 class CreateUser extends Component {
   constructor(props) {
+
+    console.log('props', props)
     super(props);
 
     this.state = {
@@ -21,15 +24,9 @@ class CreateUser extends Component {
   }
 
   createUser() {
-    fetch(`http://localhost:3000/users`, {
-      method: 'POST',
-      body: JSON.stringify(this.state),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      }
-    })
-      .then(response => response.json())
-      .then(json => this.props.history.push(`/users/`))
+    const { dispatch } = this.props;
+    // requestCreateUser(dispatch, this.state);
+    dispatch(requestCreateUser(this.state));
   }
 
   handleSubmit(e) {
@@ -53,14 +50,15 @@ class CreateUser extends Component {
       <React.Fragment>
         <br />
         <h1 className="title">Crear</h1>
-        <FormUser {...this.state} onSubmit={this.handleSubmit} onChange={this.handleChange}   />
+        <FormUser {...this.state} onSubmit={this.handleSubmit} onChange={this.handleChange} />
         <br /><br />
       </React.Fragment>
     );
   }
 }
 
-export {
-  CreateUser
-}
+const PageCreateUser = connect()(CreateUser)
 
+export {
+  PageCreateUser
+}
