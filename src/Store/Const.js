@@ -1,0 +1,7 @@
+const SAVE_USER = '[PAGE_USER] SAVE_USER';
+const SAVE_ALL_USER = '[PAGE_USER] SAVE_ALL_USER';
+
+export {
+  SAVE_USER,
+  SAVE_ALL_USER
+}

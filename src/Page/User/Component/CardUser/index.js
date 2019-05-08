@@ -13,8 +13,7 @@ function CardUser(props) {
     about,
     handleDeleteUser
   } = props;
- 
-  console.log('props', props)
+
   return (
     <article>
       <Link to={`/users/edit/${id}`}>Edit</Link>

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { FormUser } from '../../../../Component/FormUser';
-import { requestCreateUser } from '../../Store/Action'
+import { requestCreateUser } from '../../../../Store/Actions';
+import UserService from '../../../../Api/UserService';
 class CreateUser extends Component {
   constructor(props) {
-
-    console.log('props', props)
     super(props);
 
     this.state = {
@@ -24,9 +23,17 @@ class CreateUser extends Component {
   }
 
   createUser() {
-    const { dispatch } = this.props;
+    const { dispatch, history } = this.props;
+    // UserService
+    // .createUser(JSON.stringify(this.state))
+    // .then((response) => {
+    //   dispatch(saveUser(response))
+    //   dispatch(saveAllUser(response))
+    //   history.replace('/users/');
+    // });
+    dispatch(requestCreateUser(this.state))
     // requestCreateUser(dispatch, this.state);
-    dispatch(requestCreateUser(this.state));
+    // dispatch(requestCreateUser(this.state));
   }
 
   handleSubmit(e) {
@@ -56,6 +63,7 @@ class CreateUser extends Component {
     );
   }
 }
+
 
 const PageCreateUser = connect()(CreateUser)
 

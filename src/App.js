@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from 'history';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 
 import "./assets/styles/main.scss";
 

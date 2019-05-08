@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-
+import { connect } from 'react-redux';
 import UserService from '../../../../Api/UserService';
+import { saveAllUser } from '../../../../Store/Actions';
 import { CardUser } from '../../Component/CardUser';
 
 class GetUser extends Component {
   constructor(props) {
-    console.log('getUser')
+    console.log('getUser', props)
     super(props);
     this.state = { users: [] }
 
@@ -26,10 +27,24 @@ class GetUser extends Component {
   }
 
   getUsers() {
+    const { AllUser } = this.props;
+    // if (!AllUser.length) {
+    //   UserService
+    //     .getAllUser()
+    //     .then(response => {
+    //       const { dispatch, history } = this.props;
+    //       dispatch(saveAllUser(response));
+    //       this.setState({ users: response });
+    //     })
+    // } else {
+    //   this.setState({ users: AllUser });
+    // }
     UserService
       .getAllUser()
       .then(response => {
-        this.setState({ users: response })
+        const { dispatch } = this.props;
+        dispatch(saveAllUser(response));
+        this.setState({ users: response });
       })
   }
 
@@ -41,6 +56,14 @@ class GetUser extends Component {
   }
 }
 
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    AllUser: state.AllUser
+  }
+}
+
+const PageGetUser = connect(mapStateToProps)(GetUser)
+
 export {
-  GetUser as PageGetUser
+  PageGetUser
 }

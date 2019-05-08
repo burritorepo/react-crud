@@ -10,7 +10,7 @@ const addUser = (state = initialState, action) => {
   switch (action.type) {
     case SAVE_USER: {
       const { payload: { response } } = action;
-      return Object.assign(state, response);
+      return Object.assign({}, state, {Users: Last});
     }
     default:
       return state
