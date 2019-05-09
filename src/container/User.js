@@ -30,8 +30,6 @@ class User extends Component {
   constructor(props) {
     super(props);
 
-    console.log('props', props)
-
     this.state = {
       name: '',
       lastname: '',
@@ -40,7 +38,6 @@ class User extends Component {
       phone: '',
       avatar: '',
       about: '',
-      url: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
