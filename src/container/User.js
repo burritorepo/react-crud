@@ -20,7 +20,7 @@ function PageCreate(props) {
   )
 }
 
-function pageUser(props) {
+function PageUser(props) {
   return {
 
   }
@@ -39,7 +39,8 @@ class User extends Component {
       email: '',
       phone: '',
       avatar: '',
-      about: ''
+      about: '',
+      url: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -71,7 +72,7 @@ class User extends Component {
   }
 
   render() {
-    const { match: { path } } = this.props;
+    const { match: { path }, users } = this.props;
 
     const render = (path === '/users') ? <CardUser {...this.props.users} />
       : <PageCreate state={this.state} onSubmit={this.handleSubmit} onChange={this.handleChange} />
@@ -89,8 +90,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
   }
 }
 
-const PageUser = connect(mapStateToProps)(User)
+const ModuleUser = connect(mapStateToProps)(User)
 
 export {
-  PageUser
+  ModuleUser
 }

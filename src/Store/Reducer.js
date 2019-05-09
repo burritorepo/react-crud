@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import { initialState } from './State';
 
 const User = (state = initialState, action) => {
@@ -19,6 +20,10 @@ const User = (state = initialState, action) => {
   }
 }
 
-export {
+const UserStore = combineReducers({
   User
+})
+
+export {
+  UserStore
 }

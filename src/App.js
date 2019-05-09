@@ -9,10 +9,10 @@ import {
 } from './components'
 
 import {
-  PageUser
+  ModuleUser
 } from './container/User';
 
-import { store } from './store';
+import { store } from './Store';
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
           <Header />
           <Main>
             <Switch>
-              <Route path="/users" component={PageUser} />
-              <Route path="/create" component={PageUser} />
+              <Route path="/users" component={ModuleUser} />
+              <Route path="/create" component={ModuleUser} />
               <Redirect exact from="/" to="/users" />
             </Switch>
           </Main>
