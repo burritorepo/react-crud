@@ -1,27 +1,31 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom";
-import { createBrowserHistory } from 'history';
+import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import { Provider } from 'react-redux';
-
-import "./assets/styles/main.scss";
 
 import {
   Header,
   Main,
   Footer
-} from './Component';
+} from './components'
 
-import { store } from './Store';
-import { Routes } from './Routes';
+import {
+  PageUser
+} from './container/User';
 
-export function App() {
+import { store } from './store';
+
+function App() {
   return (
     <div className="Wrapper">
       <Provider store={store}>
         <Router >
           <Header />
           <Main>
-            <Routes />
+            <Switch>
+              <Route path="/users" component={PageUser} />
+              <Route path="/create" component={PageUser} />
+              <Redirect exact from="/" to="/users" />
+            </Switch>
           </Main>
           <Footer />
         </Router>
@@ -29,3 +33,8 @@ export function App() {
     </div>
   )
 }
+
+export {
+  App
+}
+
